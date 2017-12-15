@@ -40,6 +40,10 @@
 		navigator.geolocation.getCurrentPosition(onSuccess, onError);
 	}
 	
+	function openPhotoViewer(){
+		PhotoViewer.show('https://www.gstatic.com/webp/gallery3/3.png', 'Optional Title');
+	}
+	
 	function checkConnection() {
     var networkState = navigator.connection.type;
 
@@ -51,6 +55,7 @@
         // Now safe to use device APIs
 		alert ("On Ready event called");
 		console.log(navigator.camera);
+		
 			
     }
 
@@ -58,7 +63,7 @@
   </head>
   <body onload="onLoad()">
   <h1> Testing Device Features </h1>
-  <button onClick="getLocation()"> Get Location </button>
+  <button onClick="openPhotoViewer()"> Open Photo viewer </button>
   <button onClick="checkConnection()"> Check Connection </button>
   </body>
 </html>
